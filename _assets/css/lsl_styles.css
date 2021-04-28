@@ -218,6 +218,7 @@ a.download::after {
 }
 
 /*========= Cards ==========*/
+/* Cards should have a class of card, with an inner div with class of card-text.  Additionally, cards can have a second inner div with class of card-icon */
 
 .card {
   border: 3px solid #494c4e;
@@ -234,11 +235,10 @@ a.download::after {
 
 .card .card-text {
   padding: 1.875rem;
-  font-size: 1.1875rem;
 }
-
-.card .card-icon {
-  padding: 1.875rem 0rem 1.875rem 1.875rem;
+.card .card-text p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .card .card-text h2,
@@ -251,30 +251,22 @@ a.download::after {
   margin-bottom: 0.75rem;
   font-size: 1.5rem;
   font-weight: bold;
-  /* text-align: left; */
 }
 
 .card .card-icon {
-  /* margin-right: 1.25rem; */
+  padding: 1.875rem 0rem 1.875rem 1.875rem;
   flex: 0 1 auto;
   align-self: auto;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .card-icon img {
-  /* margin-right: 0.625rem; */
   width: 5.313rem;
   height: 5.313rem;
   min-width: 5.313rem;
@@ -288,11 +280,6 @@ a.download::after {
   color: var(--course-color);
 }
 
-.card-body .card-text p {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
-
 @media screen and (max-width: 768px) {
   .card-icon .fa,
   .card-icon .fas {
@@ -301,21 +288,67 @@ a.download::after {
   }
 }
 
-/*custom class for creating a card with a border without using the .card class */
+/*custom class for creating a grey box without using the "card" class. */
+
 .box-border {
   border: 1px solid #cdd5dc;
   padding: 1.875rem 6.25rem;
 }
 
-.card-header h2,
-.card-header h3,
-.card-header h4,
-.card-header h5,
-.card-header h6 {
-  margin-top: 0.75rem;
+/*========= Buttons ==========*/
+button {
+  /* Default Button and Primary Button - this can be split up if necessary */
+  /* Secondary Button */
+}
+
+.btn,
+button {
+  background-color: var(--course-color);
+  color: #ffffff;
+  margin: 10px;
+  padding: 10px 30px;
+  transition: filter 0.5s;
+}
+
+.btn:hover,
+button:hover {
+  background-color: var(--course-color);
+  filter: brightness(1.3);
+  color: #ffffff;
+}
+
+.btn:focus,
+button:focus {
+  background-color: var(--course-color);
+  filter: brightness(1.3);
+  color: #ffffff;
+}
+
+.btn:active,
+.btn:active:hover,
+.btn:active:focus,
+button:active,
+button:active:hover,
+button:active:focus {
+  background-color: var(--course-color);
+  filter: brightness(1.3);
+  color: #ffffff;
+}
+
+.btn:disabled,
+.btn:disabled:hover,
+.btn[aria-expanded="true"],
+.btn[aria-expanded="true"]:hover,
+button:disabled,
+button:disabled:hover,
+button[aria-expanded="true"],
+button[aria-expanded="true"]:hover {
+  background-color: grey, 0.5;
+  color: #ffffff;
 }
 
 /*========= Lists ==========*/
+
 ol,
 ul {
   font-size: 1rem;
@@ -1021,119 +1054,6 @@ video {
 .accordion .card-body {
   border: 1px solid #cdd5dc;
   background-color: #f7f7f7;
-}
-
-/*========= Buttons ==========*/
-button {
-  /* Default Button and Primary Button - this can be split up if necessary */
-  /* Secondary Button */
-}
-
-.btn,
-.btn-primary button .btn,
-button.btn-primary {
-  background-color: var(--course-color);
-  color: #ffffff;
-  margin: 10px;
-  padding: 10px 30px;
-}
-
-.btn:hover,
-button .btn:hover,
-button.btn-primary:hover {
-  background-color: var(--course-color);
-  filter: brightness(0.8);
-  color: #ffffff;
-  /* border: 0 solid transparent; */
-}
-
-button .btn:focus,
-button.btn-primary:focus {
-  background-color: #004489;
-  border-color: #004489;
-  color: #ffffff;
-}
-
-button .btn:active,
-button .btn:active:hover,
-button .btn:active:focus,
-button.btn-primary:active,
-button.btn-primary:active:hover,
-button.btn-primary:active:focus {
-  background-color: #004489;
-  border-color: #004489;
-  color: #ffffff;
-}
-
-button .btn:disabled,
-button .btn[aria-expanded="true"],
-button.btn-primary:disabled,
-button.btn-primary[aria-expanded="true"] {
-  background-color: #006fbf, 0.5;
-  border-color: #006fbf, 0.5;
-  color: #ffffff;
-}
-
-button .btn:disabled:hover,
-button .btn[aria-expanded="true"]:hover,
-button.btn-primary:disabled:hover,
-button.btn-primary[aria-expanded="true"]:hover {
-  background-color: rgba(0, 111, 191, 0.5);
-  border-color: rgba(0, 111, 191, 0.5);
-  color: #ffffff;
-}
-
-button.btn-secondary,
-button.copy-btn {
-  background-color: #e3e9f1;
-  border-color: #e3e9f1;
-  color: #000000;
-  margin: 10px;
-  padding: 10px 30px;
-}
-
-button.btn-secondary:hover,
-button.copy-btn:hover {
-  background-color: #cdd5dc;
-  color: #000000;
-  border: 0 solid transparent;
-}
-
-button.btn-secondary:focus,
-button.copy-btn:focus {
-  background-color: #cdd5dc;
-  border-color: #004489;
-  color: #000000;
-}
-
-button.btn-secondary:active,
-button.btn-secondary:active:hover,
-button.btn-secondary:active:focus,
-button.copy-btn:active,
-button.copy-btn:active:hover,
-button.copy-btn:active:focus {
-  background-color: #cdd5dc;
-  border-color: #cdd5dc;
-  color: #000000;
-}
-
-button.btn-secondary:disabled,
-button.btn-secondary[aria-expanded="true"],
-button.copy-btn:disabled,
-button.copy-btn[aria-expanded="true"] {
-  color: #cdd5dc;
-  background-color: rgba(227, 233, 241, 0.5);
-  border-color: rgba(227, 233, 241, 0.5);
-  color: #000000;
-}
-
-button.btn-secondary:disabled:hover,
-button.btn-secondary[aria-expanded="true"]:hover,
-button.copy-btn:disabled:hover,
-button.copy-btn[aria-expanded="true"]:hover {
-  background-color: rgba(227, 233, 241, 0.5);
-  border-color: rgba(227, 233, 241, 0.5);
-  color: #000000;
 }
 
 /*========= Quick Assessments ==========*/

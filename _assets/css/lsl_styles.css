@@ -1,7 +1,7 @@
 /*========= Course Color ==========*/
 
 :root {
-  --course-color: #911975;
+  --course-color: #af0e44;
 }
 /* 
 Purple #6969CE
@@ -209,19 +209,19 @@ a.download::after {
   margin-left: 0.35rem;
 }
 
-a.new-window::after {
+/* a.new-window::after {
   content: "\f35d";
 }
 
 a.download::after {
   content: "\f019";
-}
+} */
 
 /*========= Cards ==========*/
 /* Cards should have a class of card, with an inner div with class of card-text.  Additionally, cards can have a second inner div with class of card-icon */
 
 .card {
-  border: 3px solid #494c4e;
+  border: 1px solid #494c4e;
   margin: 1.875rem 0 1.875rem 0;
   box-shadow: 0 7px 30px -10px rgba(122, 135, 142, 0.5);
 
@@ -274,7 +274,7 @@ a.download::after {
 
 .card-icon .fa,
 .card-icon .fas {
-  font-size: 4rem;
+  font-size: 3.5rem;
   min-width: 5.313rem;
   text-align: center;
   color: var(--course-color);
@@ -727,6 +727,11 @@ footer img {
 }
 
 /*========= Icons ==========*/
+
+.fas {
+  color: #006fbf;
+  margin-right: 0.5rem;
+}
 /*========= Images ==========*/
 /*========= Jumbotrons ==========*/
 .jumbotron {
@@ -801,6 +806,7 @@ footer img {
 /*========= Tables ==========*/
 .table-responsive,
 .table {
+  color: #494c4e;
   overflow-y: hidden;
   padding: 1.25rem;
 }
@@ -815,6 +821,7 @@ footer img {
 
 .table-responsive th,
 .table th {
+  color: #494c4e;
   font-size: 1.25rem;
   background-color: #f7f7f7;
   font-weight: bold;

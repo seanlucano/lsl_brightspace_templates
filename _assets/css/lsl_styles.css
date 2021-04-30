@@ -1,7 +1,7 @@
 /*========= Course Color ==========*/
 
 :root {
-  --course-color: #af0e44;
+  --course-color: #6969ce;
 }
 /* 
 Purple #6969CE
@@ -38,11 +38,12 @@ h5,
 h6,
 .h6 {
   color: #494c4e;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 h1,
 .h1 {
+  font-weight: normal;
   font-size: 2.5rem;
   line-height: 3rem;
   margin-top: 1.875rem;
@@ -62,6 +63,8 @@ h3,
 .h3 {
   font-size: 1.625rem;
   line-height: 2.125rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 h4,
@@ -196,6 +199,11 @@ a:active {
   text-decoration: none;
 }
 
+/* a .fas {
+  color: #006fbf;
+  margin-right: 0.5rem;
+} */
+
 a.new-window::after,
 a.download::after {
   -webkit-font-smoothing: antialiased;
@@ -209,16 +217,15 @@ a.download::after {
   margin-left: 0.35rem;
 }
 
-/* a.new-window::after {
+a.new-window::after {
   content: "\f35d";
 }
 
 a.download::after {
   content: "\f019";
-} */
+}
 
 /*========= Cards ==========*/
-/* Cards should have a class of card, with an inner div with class of card-text.  Additionally, cards can have a second inner div with class of card-icon */
 
 .card {
   border: 1px solid #494c4e;
@@ -241,7 +248,6 @@ a.download::after {
   word-wrap: break-word;
 }
 
-.card .card-text h2,
 .card .card-text h3,
 .card .card-text h4,
 .card .card-text h5,
@@ -250,6 +256,12 @@ a.download::after {
   margin-top: 0.075rem;
   margin-bottom: 0.75rem;
   font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card .card-text h2 {
+  margin-top: 0.075rem;
+  margin-bottom: 0.75rem;
   font-weight: bold;
 }
 
@@ -288,8 +300,7 @@ a.download::after {
   }
 }
 
-/*custom class for creating a grey box without using the "card" class. */
-
+/* simple grey box without using the "card" class. */
 .box-border {
   border: 1px solid #cdd5dc;
   padding: 1.875rem 6.25rem;
@@ -347,6 +358,29 @@ button[aria-expanded="true"]:hover {
   color: #ffffff;
 }
 
+/** Videos **/
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 2rem 0rem;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
 /*========= Lists ==========*/
 
 ol,
@@ -621,8 +655,8 @@ ul.text-colour-one span:before {
 
 /*========= Figures ==========*/
 figure {
-  border: 1px solid #000000;
-  margin: 0 auto 10px;
+  /* border: 1px solid #000000; */
+  margin: 10px auto 10px auto;
   display: inline-block;
 }
 
@@ -633,7 +667,7 @@ figure.figure-alt {
 figure figcaption {
   font-style: normal;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -728,11 +762,12 @@ footer img {
 
 /*========= Icons ==========*/
 
-.fas {
+/* .fas {
   color: #006fbf;
   margin-right: 0.5rem;
-}
+} */
 /*========= Images ==========*/
+
 /*========= Jumbotrons ==========*/
 .jumbotron {
   padding: 1.875rem;
@@ -832,37 +867,6 @@ footer img {
 .table tr,
 .table td {
   padding: 1.25rem;
-}
-
-/** Videos **/
-.embed-responsive {
-  margin-bottom: 0.9375rem;
-}
-
-.video-wrapper {
-  margin: 3rem auto;
-  background-color: #ffffff;
-  padding: 0px;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.video-wrapper .video-text {
-  color: #000000;
-  margin-left: 10px;
-}
-
-video {
-  width: 100%;
-  height: auto;
 }
 
 /*========= Banners ==========*/

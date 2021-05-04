@@ -307,10 +307,6 @@ a.download::before {
 }
 
 /*========= Buttons ==========*/
-button {
-  /* Default Button and Primary Button - this can be split up if necessary */
-  /* Secondary Button */
-}
 
 .btn,
 button {
@@ -757,7 +753,7 @@ footer {
 }
 
 footer img {
-  max-height: 100px;
+  max-height: 75px;
 }
 
 /*========= Icons ==========*/

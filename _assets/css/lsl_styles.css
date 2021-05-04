@@ -204,8 +204,8 @@ a:active {
   margin-right: 0.5rem;
 } */
 
-a.new-window::after,
-a.download::after {
+a.new-window::before,
+a.download::before {
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   font-style: normal;
@@ -214,14 +214,14 @@ a.download::after {
   line-height: 1;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  margin-left: 0.35rem;
+  margin-right: 0.35rem;
 }
 
-a.new-window::after {
+a.new-window::before {
   content: "\f35d";
 }
 
-a.download::after {
+a.download::before {
   content: "\f019";
 }
 
@@ -750,14 +750,14 @@ figure.float-right {
 
 /*========= Footers ==========*/
 footer {
-  border-top: 2px solid #e5e5e5;
+  border-top: 1px solid #b5bdc2;
   padding: 30px 0;
   margin-top: 3.125rem;
   text-align: right;
 }
 
 footer img {
-  max-height: 125px;
+  max-height: 100px;
 }
 
 /*========= Icons ==========*/

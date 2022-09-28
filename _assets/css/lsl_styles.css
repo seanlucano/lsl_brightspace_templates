@@ -246,7 +246,7 @@ a.download::before {
   word-wrap: break-word;
 }
 
-/* .card .card-text h3,
+.card .card-text h3,
 .card .card-text h4,
 .card .card-text h5,
 .card .card-text h6,
@@ -255,7 +255,7 @@ a.download::before {
   margin-bottom: 0.75rem;
   font-size: 1.5rem;
   font-weight: bold;
-} */
+}
 
 .card .card-text h2 {
   margin-top: 0.075rem;
@@ -290,15 +290,45 @@ a.download::before {
   color: var(--course-color);
 }
 
+
+/* Feedback cards */
+
+.feedback .card-text h3,
+.feedback .card-text h4 {
+  margin-top: 0.075rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 .card.feedback {
   text-align: center;
   justify-content: center;
 }
 
-#selection-feedback {}
 
 #selection-feedback .btn {
-  margin-right: 10px;
+  margin: 5px;
+}
+
+.ratings {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+ 
+  
+  
+}
+
+.ratings li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-text {
+  text-align: center;
 }
 
 .selected {

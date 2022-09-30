@@ -4,7 +4,7 @@
 /*========= Course Color ==========*/
 
 :root {
-  --course-color: #494c4e;
+  --course-color: #D72894;
 }
 
 /* 
@@ -332,7 +332,12 @@ a.download::before {
 }
 
 .selected {
-  border: 2px solid grey;
+  border: 2px solid #494c4e;
+}
+
+.feedback .submit {
+  background-color: var(--course-color);
+  color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -399,22 +404,21 @@ button:active:focus {
   color: #ffffff;
 }
 
+/* disabled buttons */
 .btn:disabled,
 .btn:disabled:hover,
-.btn[aria-expanded="true"],
-.btn[aria-expanded="true"]:hover,
-button:disabled,
-button:disabled:hover,
-button[aria-expanded="true"],
-button[aria-expanded="true"]:hover {
+.btn:disabled:active,
+.btn:disabled:focus,
+.btn:disabled:active:hover,
+.btn:disabled:active:focus {
   background-color: grey, 0.5;
-  color: #ffffff;
+  filter: brightness(1);
+  color: #494c4e;
 }
 
 
 /* feedback buttons */
-.feedback .btn,
-.feedback button {
+.feedback-btn {
   /* border: 2px solid lightgrey; */
   background-color: lightgray;
   color: #494c4e;
@@ -422,24 +426,22 @@ button[aria-expanded="true"]:hover {
 
 
 
-.feedback.btn:hover,
-.feedback button:hover,
-.feedback .btn:active,
-.feedback .btn:active:hover,
-.feedback .btn:focus,
-.feedback button:focus,
-.feedback .btn:active:focus,
-.feedback button:active,
-.feedback button:active:hover,
-.feedback button:active:focus {
+.feedback-btn:hover,
+.feedback-btn:active,
+.feedback-btn:active:hover,
+.feedback-btn:focus,
+.feedback-btn:active:focus,
+.feedback-btn:active:hover,
+.feedback-btnn:active:focus {
   background-color: lightgrey;
   filter: brightness(1.1);
+  color: black;
   
 }
 
-.feedback input[type="submit"] {
+/* .feedback input[type="submit"] {
   color: black;
-}
+} */
 
 .variable-text {
   font-weight: bold;
